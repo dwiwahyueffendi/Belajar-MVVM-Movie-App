@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MovieAppJetpack</string>
+    <string name="movie">MOVIE</string>
+    <string name="tv_show">TV SHOW</string>
+</resources>
