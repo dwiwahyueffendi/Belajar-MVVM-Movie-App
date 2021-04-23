@@ -8,9 +8,9 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.movieappjetpack.R
-import com.example.movieappjetpack.adapter.MovieAdapter
+import com.example.movieappjetpack.adapter.ContentAdapter
 import com.example.movieappjetpack.databinding.FragmentListBinding
-import com.example.movieappjetpack.viewmodel.MovieViewModel
+import com.example.movieappjetpack.viewmodel.ContentViewModel
 
 class MovieFragment: Fragment() {
 
@@ -28,10 +28,10 @@ class MovieFragment: Fragment() {
         _binding = FragmentListBinding.bind(view)
 
         if (activity != null) {
-            val viewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory())[MovieViewModel::class.java]
-            val content = viewModel.getContent()
+            val viewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory())[ContentViewModel::class.java]
+            val content = viewModel.getContentMovie()
 
-            val movieAdapter = MovieAdapter()
+            val movieAdapter = ContentAdapter()
             movieAdapter.setContent(content)
 
             binding.apply {

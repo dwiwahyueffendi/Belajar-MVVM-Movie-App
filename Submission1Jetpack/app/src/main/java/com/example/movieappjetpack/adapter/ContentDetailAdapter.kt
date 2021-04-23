@@ -9,49 +9,56 @@ import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.bumptech.glide.request.RequestOptions
 import com.example.movieappjetpack.R
 import com.example.movieappjetpack.data.ContentEntity
-import com.example.movieappjetpack.databinding.ListItemBinding
-import com.example.movieappjetpack.view.DetailActivity
+import com.example.movieappjetpack.databinding.ActivityDetailBinding
 import java.util.ArrayList
 
-class TvShowAdapter: RecyclerView.Adapter<TvShowAdapter.ContentViewHolder>() {
+class ContentDetailAdapter: RecyclerView.Adapter<ContentDetailAdapter.ContentViewHolder>() {
     private var listContent = ArrayList<ContentEntity>()
 
     fun setContent(content: List<ContentEntity>?) {
         if (content == null) return
-        this.listContent.clear()
-        this.listContent.addAll(content)
+
+        if (content.size > 0){
+            listContent.clear()
+        }
+        listContent.addAll(content)
+
+        notifyDataSetChanged()
     }
 
-    class ContentViewHolder(private val binding: ListItemBinding): RecyclerView.ViewHolder(binding.root){
+    inner class ContentViewHolder(private val binding: ActivityDetailBinding): RecyclerView.ViewHolder(binding.root){
         fun bind(content: ContentEntity){
-            with(binding){
-                tvTitle.text = content.title
-                tvRelease.text = content.dateRelease
-                itemView.setOnClickListener {
-                    val intent = Intent(itemView.context, DetailActivity::class.java)
-                    intent.putExtra(DetailActivity.EXTRA_COURSE, content.id)
-                    itemView.context.startActivity(intent)
-                }
+            binding.apply{
+                tvTitleDetail.text = content.title
+                tvDateRelease.text = content.dateRelease
+                tvRating.text = content.vote
+                tvPopularity.text = content.popularity
+                tvDescription.text = content.description
+
+                val requestOptions = RequestOptions()
+                requestOptions.placeholder(R.drawable.ic_loading)
+                requestOptions.error(R.drawable.ic_error)
+
                 Glide.with(itemView.context)
                     .load(content.image)
-                    .apply(RequestOptions()
+                    .apply(
+                        RequestOptions()
                         .placeholder(R.drawable.ic_loading)
                         .error(R.drawable.ic_error))
                     .transition(DrawableTransitionOptions.withCrossFade())
                     .centerCrop()
-                    .into(ivContent)
+                    .into(ivContentDetail)
             }
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ContentViewHolder {
-        val listItemBinding = ListItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return ContentViewHolder(listItemBinding)
+        val view = ActivityDetailBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return ContentViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: ContentViewHolder, position: Int) {
-        val content = listContent[position]
-        holder.bind(content)
+        holder.bind(listContent[position])
     }
 
     override fun getItemCount(): Int = listContent.size

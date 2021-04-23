@@ -8,9 +8,9 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.movieappjetpack.R
-import com.example.movieappjetpack.adapter.TvShowAdapter
+import com.example.movieappjetpack.adapter.ContentAdapter
 import com.example.movieappjetpack.databinding.FragmentListBinding
-import com.example.movieappjetpack.viewmodel.TvShowViewModel
+import com.example.movieappjetpack.viewmodel.ContentViewModel
 
 
 class TvShowFragment: Fragment() {
@@ -29,10 +29,10 @@ class TvShowFragment: Fragment() {
         _binding = FragmentListBinding.bind(view)
 
         if (activity != null) {
-            val viewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory())[TvShowViewModel::class.java]
-            val content = viewModel.getContent()
+            val viewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory())[ContentViewModel::class.java]
+            val content = viewModel.getContentTvShow()
 
-            val tvShowAdapter = TvShowAdapter()
+            val tvShowAdapter = ContentAdapter()
             tvShowAdapter.setContent(content)
 
             binding.apply {
