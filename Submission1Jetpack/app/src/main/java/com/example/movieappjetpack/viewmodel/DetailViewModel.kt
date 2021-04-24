@@ -7,8 +7,8 @@ import com.example.movieappjetpack.data.dummy.DataDummy
 class DetailViewModel: ViewModel() {
     private lateinit var id: String
     private lateinit var endPoint: ContentEntity
-    val showMovie = DataDummy.generateDummyMovie()
-    val showTvShow = DataDummy.generateDummyTvShow()
+    private val showMovie = DataDummy.generateDummyMovie()
+    private val showTvShow = DataDummy.generateDummyTvShow()
 
     fun setContentDetail(id: String){
         this.id = id

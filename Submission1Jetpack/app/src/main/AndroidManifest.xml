@@ -11,9 +11,8 @@
         android:roundIcon="@drawable/movie"
         android:supportsRtl="true"
         android:theme="@style/Theme.MovieAppJetpack">
-        <activity android:name=".view.HomeActivity"></activity>
-        <activity android:name=".view.DetailActivity" />
-        <activity android:name=".view.ContentActivity" />
+        <activity android:name=".view.HomeActivity"/>
+        <activity android:name=".view.DetailActivity"/>
         <activity android:name=".view.SplashscreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
