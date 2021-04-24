@@ -8,5 +8,6 @@ data class ContentEntity(
     //var bookmarked: Boolean = false,
     var image: String,
     var vote: String,
-    var popularity: String
+    var popularity: String,
+    var link: String
 )

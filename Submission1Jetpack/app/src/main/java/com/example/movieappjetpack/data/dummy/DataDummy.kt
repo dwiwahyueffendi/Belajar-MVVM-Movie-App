@@ -14,7 +14,8 @@ object DataDummy {
             "2021-03-24",
             "https://image.tmdb.org/t/p/w500/pgqgaUx1cJb5oZQQ5v0tNARCeBp.jpg",
             "8.3",
-            "6.914.198"))
+            "6.914.198",
+            "https://www.themoviedb.org/movie/399566-godzilla-vs-kong"))
         movie.add(ContentEntity(
             "22221",
             "Chaos Walking",
@@ -22,7 +23,8 @@ object DataDummy {
             "2021-02-24",
             "https://image.tmdb.org/t/p/w500/9kg73Mg8WJKlB9Y2SAJzeDKAnuB.jpg",
             "7.4",
-            "2.589.774"))
+            "2.589.774",
+            "https://www.themoviedb.org/movie/412656-chaos-walking"))
         movie.add(ContentEntity(
             "33331",
             "Mortal Kombat",
@@ -30,7 +32,8 @@ object DataDummy {
             "2021-04-07",
             "https://image.tmdb.org/t/p/w500/8yhtzsbBExY8mUct2GOk4LDDuGH.jpg",
             "7.4",
-            "460.465"))
+            "460.465",
+            "https://www.themoviedb.org/movie/460465-mortal-kombat"))
         movie.add(ContentEntity(
             "44441",
             "Raya and the Last Dragon",
@@ -38,7 +41,8 @@ object DataDummy {
             "2021-03-03",
             "https://image.tmdb.org/t/p/w500/lPsD10PP4rgUGiGR4CCXA6iY0QQ.jpg",
             "8.3",
-            "527.774"))
+            "527.774",
+            "https://www.themoviedb.org/movie/527774-raya-and-the-last-dragon"))
         movie.add(ContentEntity(
             "55551",
             "Godzilla vs. Kong",
@@ -46,7 +50,8 @@ object DataDummy {
             "2021-03-24",
             "https://image.tmdb.org/t/p/w500/pgqgaUx1cJb5oZQQ5v0tNARCeBp.jpg",
             "8.3",
-            "6.914.198"))
+            "6.914.198",
+            "https://www.themoviedb.org/movie/527774-raya-and-the-last-dragon"))
         movie.add(ContentEntity(
             "66661",
             "Godzilla vs. Kong",
@@ -54,7 +59,8 @@ object DataDummy {
             "2021-03-24",
             "https://image.tmdb.org/t/p/w500/pgqgaUx1cJb5oZQQ5v0tNARCeBp.jpg",
             "8.3",
-            "6.914.198"))
+            "6.914.198",
+            "https://www.themoviedb.org/movie/527774-raya-and-the-last-dragon"))
         movie.add(ContentEntity(
             "77771",
             "Godzilla vs. Kong",
@@ -62,7 +68,8 @@ object DataDummy {
             "2021-03-24",
             "https://image.tmdb.org/t/p/w500/pgqgaUx1cJb5oZQQ5v0tNARCeBp.jpg",
             "8.3",
-            "6.914.198"))
+            "6.914.198",
+            "https://www.themoviedb.org/movie/527774-raya-and-the-last-dragon"))
         movie.add(ContentEntity(
             "88881",
             "Godzilla vs. Kong",
@@ -70,7 +77,8 @@ object DataDummy {
             "2021-03-24",
             "https://image.tmdb.org/t/p/w500/pgqgaUx1cJb5oZQQ5v0tNARCeBp.jpg",
             "8.3",
-            "6.914.198"))
+            "6.914.198",
+            "https://www.themoviedb.org/movie/527774-raya-and-the-last-dragon"))
         movie.add(ContentEntity(
             "99991",
             "Godzilla vs. Kong",
@@ -78,7 +86,8 @@ object DataDummy {
             "2021-03-24",
             "https://image.tmdb.org/t/p/w500/pgqgaUx1cJb5oZQQ5v0tNARCeBp.jpg",
             "8.3",
-            "6.914.198"))
+            "6.914.198",
+            "https://www.themoviedb.org/movie/527774-raya-and-the-last-dragon"))
         movie.add(ContentEntity(
             "11110",
             "Godzilla vs. Kong",
@@ -86,7 +95,8 @@ object DataDummy {
             "2021-03-24",
             "https://image.tmdb.org/t/p/w500/pgqgaUx1cJb5oZQQ5v0tNARCeBp.jpg",
             "8.3",
-            "6.914.198"))
+            "6.914.198",
+            "https://www.themoviedb.org/movie/527774-raya-and-the-last-dragon"))
 
         return movie
     }
@@ -101,7 +111,8 @@ object DataDummy {
             "2021-03-24",
             "https://image.tmdb.org/t/p/w500/pgqgaUx1cJb5oZQQ5v0tNARCeBp.jpg",
             "8.3",
-            "6.914.198"))
+            "6.914.198",
+            "https://www.themoviedb.org/movie/527774-raya-and-the-last-dragon"))
         tvShow.add(ContentEntity(
             "22222",
             "Chaos Walking",
@@ -109,7 +120,8 @@ object DataDummy {
             "2021-02-24",
             "https://image.tmdb.org/t/p/w500/9kg73Mg8WJKlB9Y2SAJzeDKAnuB.jpg",
             "7.4",
-            "2.589.774"))
+            "2.589.774",
+            "https://www.themoviedb.org/movie/527774-raya-and-the-last-dragon"))
         tvShow.add(ContentEntity(
             "33333",
             "Mortal Kombat",
@@ -117,7 +129,8 @@ object DataDummy {
             "2021-04-07",
             "https://image.tmdb.org/t/p/w500/8yhtzsbBExY8mUct2GOk4LDDuGH.jpg",
             "7.4",
-            "460.465"))
+            "460.465",
+            "https://www.themoviedb.org/movie/527774-raya-and-the-last-dragon"))
         tvShow.add(ContentEntity(
             "44444",
             "Raya and the Last Dragon",
@@ -125,7 +138,8 @@ object DataDummy {
             "2021-03-03",
             "https://image.tmdb.org/t/p/w500/lPsD10PP4rgUGiGR4CCXA6iY0QQ.jpg",
             "8.3",
-            "527.774"))
+            "527.774",
+            "https://www.themoviedb.org/movie/527774-raya-and-the-last-dragon"))
         tvShow.add(ContentEntity(
             "55555",
             "Godzilla vs. Kong",
@@ -133,7 +147,8 @@ object DataDummy {
             "2021-03-24",
             "https://image.tmdb.org/t/p/w500/pgqgaUx1cJb5oZQQ5v0tNARCeBp.jpg",
             "8.3",
-            "6.914.198"))
+            "6.914.198",
+            "https://www.themoviedb.org/movie/527774-raya-and-the-last-dragon"))
         tvShow.add(ContentEntity(
             "66666",
             "Godzilla vs. Kong",
@@ -141,7 +156,8 @@ object DataDummy {
             "2021-03-24",
             "https://image.tmdb.org/t/p/w500/pgqgaUx1cJb5oZQQ5v0tNARCeBp.jpg",
             "8.3",
-            "6.914.198"))
+            "6.914.198",
+            "https://www.themoviedb.org/movie/527774-raya-and-the-last-dragon"))
         tvShow.add(ContentEntity(
             "77777",
             "Godzilla vs. Kong",
@@ -149,7 +165,8 @@ object DataDummy {
             "2021-03-24",
             "https://image.tmdb.org/t/p/w500/pgqgaUx1cJb5oZQQ5v0tNARCeBp.jpg",
             "8.3",
-            "6.914.198"))
+            "6.914.198",
+            "https://www.themoviedb.org/movie/527774-raya-and-the-last-dragon"))
         tvShow.add(ContentEntity(
             "88888",
             "Godzilla vs. Kong",
@@ -157,7 +174,8 @@ object DataDummy {
             "2021-03-24",
             "https://image.tmdb.org/t/p/w500/pgqgaUx1cJb5oZQQ5v0tNARCeBp.jpg",
             "8.3",
-            "6.914.198"))
+            "6.914.198",
+            "https://www.themoviedb.org/movie/527774-raya-and-the-last-dragon"))
         tvShow.add(ContentEntity(
             "99999",
             "Godzilla vs. Kong",
@@ -165,7 +183,8 @@ object DataDummy {
             "2021-03-24",
             "https://image.tmdb.org/t/p/w500/pgqgaUx1cJb5oZQQ5v0tNARCeBp.jpg",
             "8.3",
-            "6.914.198"))
+            "6.914.198",
+            "https://www.themoviedb.org/movie/527774-raya-and-the-last-dragon"))
         tvShow.add(ContentEntity(
             "10101",
             "Godzilla vs. Kong",
@@ -173,7 +192,8 @@ object DataDummy {
             "2021-03-24",
             "https://image.tmdb.org/t/p/w500/pgqgaUx1cJb5oZQQ5v0tNARCeBp.jpg",
             "8.3",
-            "6.914.198"))
+            "6.914.198",
+            "https://www.themoviedb.org/movie/527774-raya-and-the-last-dragon"))
 
         return tvShow
     }

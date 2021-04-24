@@ -41,4 +41,5 @@ ext {
     espressoVersion = '3.3.0'
     androidTestVersion = '1.3.0'
     junitExtversion = '1.1.2'
+    mockitoCoreVersion = '3.6.0'
 }

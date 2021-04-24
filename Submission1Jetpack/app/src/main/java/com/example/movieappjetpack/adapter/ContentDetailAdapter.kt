@@ -1,18 +1,6 @@
 package com.example.movieappjetpack.adapter
 
-import android.content.Intent
-import android.view.LayoutInflater
-import android.view.ViewGroup
-import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
-import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
-import com.bumptech.glide.request.RequestOptions
-import com.example.movieappjetpack.R
-import com.example.movieappjetpack.data.ContentEntity
-import com.example.movieappjetpack.databinding.ActivityDetailBinding
-import java.util.ArrayList
-
-class ContentDetailAdapter: RecyclerView.Adapter<ContentDetailAdapter.ContentViewHolder>() {
+/*class ContentDetailAdapter: RecyclerView.Adapter<ContentDetailAdapter.ContentViewHolder>() {
     private var listContent = ArrayList<ContentEntity>()
 
     fun setContent(content: List<ContentEntity>?) {
@@ -62,4 +50,4 @@ class ContentDetailAdapter: RecyclerView.Adapter<ContentDetailAdapter.ContentVie
     }
 
     override fun getItemCount(): Int = listContent.size
-}
+}*/
