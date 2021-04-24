@@ -1,5 +1,6 @@
 package com.example.movieappjetpack.view
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
@@ -14,16 +15,14 @@ import com.bumptech.glide.request.RequestOptions
 import com.example.movieappjetpack.R
 import com.example.movieappjetpack.data.ContentEntity
 import com.example.movieappjetpack.databinding.ActivityDetailBinding
-import com.example.movieappjetpack.viewmodel.ContentViewModel
+import com.example.movieappjetpack.viewmodel.DetailViewModel
 
 class DetailActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityDetailBinding
-    private lateinit var viewModel: ContentViewModel
+    private lateinit var viewModel: DetailViewModel
     private lateinit var share: String
     private lateinit var link: String
-    //private lateinit var adapter: ContentAdapter
-    //private lateinit var contentEntity: ContentEntity
 
     companion object {
         const val EXTRA_DETAIL = "extra_detail"
@@ -56,7 +55,7 @@ class DetailActivity : AppCompatActivity() {
         val state = intent.extras
         val tempId = state?.getString(EXTRA_DETAIL)
 
-        viewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory())[ContentViewModel::class.java]
+        viewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory())[DetailViewModel::class.java]
 
         if (state != null) {
             if (tempId != null) {
@@ -74,37 +73,31 @@ class DetailActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
             R.id.menu_share ->{
-                val shareUser = "Username: $share"
+                val shareUser = share
                 val shareIntent = Intent(Intent.ACTION_SEND)
                 shareIntent.putExtra(Intent.EXTRA_TEXT, shareUser)
                 shareIntent.type = "text/html"
                 startActivity(Intent.createChooser(shareIntent, "Share using"))
-
-                /*Intent(this, DetailActivity::class.java).also {
-                    startActivity(it)
-                }*/
             }
             R.id.menu_web ->{
                 val url = link
                 val intent = Intent(Intent.ACTION_VIEW)
                 intent.data = Uri.parse(url)
                 startActivity(intent)
-
-                /*Intent(this, DetailActivity::class.java).also {
-                    startActivity(it)
-                }*/
             }
         }
         return super.onOptionsItemSelected(item)
     }
 
+    @SuppressLint("StringFormatInvalid")
     private fun getData(content: ContentEntity, context: Context) {
         binding.apply {
             tvTitleDetail.text = content.title
-            tvDateRelease.text = content.dateRelease
-            tvRating.text = content.vote
-            tvPopularity.text = content.popularity
-            tvDescription.text = content.description
+            tvDateRelease.text = StringBuilder("Date Release :").append(" ${content.dateRelease}")
+                //resources.getString(R.string.date_release, content.dateRelease)
+            tvRating.text = StringBuilder("Rating :").append(" ${content.vote}")
+            tvPopularity.text = StringBuilder("Viewers :").append(" ${content.popularity}")
+            tvDescription.text = StringBuilder("Description :").append("\n${content.description}")
 
             val requestOptions = RequestOptions()
             requestOptions.placeholder(R.drawable.ic_loading)

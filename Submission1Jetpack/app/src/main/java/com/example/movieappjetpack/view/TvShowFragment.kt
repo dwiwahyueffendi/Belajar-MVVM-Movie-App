@@ -9,36 +9,36 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.movieappjetpack.R
 import com.example.movieappjetpack.adapter.ContentAdapter
-import com.example.movieappjetpack.databinding.FragmentListBinding
-import com.example.movieappjetpack.viewmodel.ContentViewModel
+import com.example.movieappjetpack.databinding.FragmentTvShowBinding
+import com.example.movieappjetpack.viewmodel.TvShowViewModel
 
 
 class TvShowFragment: Fragment() {
 
-    private var _binding: FragmentListBinding? = null
+    private var _binding: FragmentTvShowBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_list, container, false)
+        return inflater.inflate(R.layout.fragment_tv_show, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        _binding = FragmentListBinding.bind(view)
+        _binding = FragmentTvShowBinding.bind(view)
 
         if (activity != null) {
-            val viewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory())[ContentViewModel::class.java]
+            val viewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory())[TvShowViewModel::class.java]
             val content = viewModel.getContentTvShow()
 
             val tvShowAdapter = ContentAdapter()
             tvShowAdapter.setContent(content)
 
             binding.apply {
-                rvList.layoutManager = LinearLayoutManager(context)
-                rvList.setHasFixedSize(true)
-                rvList.adapter = tvShowAdapter
+                rvListTvShow.layoutManager = LinearLayoutManager(context)
+                rvListTvShow.setHasFixedSize(true)
+                rvListTvShow.adapter = tvShowAdapter
             }
         }
     }

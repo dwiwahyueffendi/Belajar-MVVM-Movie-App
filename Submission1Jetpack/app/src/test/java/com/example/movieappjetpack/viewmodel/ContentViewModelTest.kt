@@ -8,25 +8,26 @@ import org.junit.Before
 import org.junit.Test
 
 class ContentViewModelTest{
-    private lateinit var contentViewModel: ContentViewModel
+    private lateinit var movieViewModel: MovieViewModel
+    private lateinit var tvShowViewModel: TvShowViewModel
+    private lateinit var detailViewModel: DetailViewModel
     private val dummyMovie = DataDummy.generateDummyMovie()[0]
     private val idMovie = dummyMovie.id
     private val dummyTvShow = DataDummy.generateDummyTvShow()[0]
     private val idTvShow = dummyTvShow.id
-    //private val contentMovie = contentViewModel.getContentMovie()
 
 
     @Before
     fun setUp() {
-        contentViewModel = ContentViewModel()
-        //contentViewModel.setContentDetail(idMovie)
-        //contentViewModel.setContentDetail(idTvShow)
+        movieViewModel = MovieViewModel()
+        tvShowViewModel = TvShowViewModel()
+        detailViewModel = DetailViewModel()
     }
 
     @Test
     fun testGetContentMovie() {
         //Testing Movie
-        val contentEntity = contentViewModel.getContentMovie()
+        val contentEntity = movieViewModel.getContentMovie()
         assertNotNull(contentEntity)
         assertEquals(10, contentEntity.size)
     }
@@ -34,22 +35,22 @@ class ContentViewModelTest{
     @Test
     fun testGetContentTvShow() {
         //Testing TvShow
-        val contentEntity = contentViewModel.showTvShow
+        val contentEntity = tvShowViewModel.getContentTvShow()
         assertNotNull(contentEntity)
         assertEquals(10, contentEntity.size)
     }
 
     @Test
     fun testSetContentDetail() {
-        contentViewModel.setContentDetail(idMovie)
-        contentViewModel.setContentDetail(idTvShow)
+        detailViewModel.setContentDetail(idMovie)
+        detailViewModel.setContentDetail(idTvShow)
     }
 
     @Test
     fun testGetContentDetail() {
         //Testing Detail Movie
-        contentViewModel.setContentDetail(dummyMovie.id)
-        val contentMovie = contentViewModel.getContentDetail()
+        detailViewModel.setContentDetail(dummyMovie.id)
+        val contentMovie = detailViewModel.getContentDetail()
         Assert.assertNotNull(contentMovie)
         assertEquals(dummyMovie.id, contentMovie.id)
         assertEquals(dummyMovie.title, contentMovie.title)
@@ -61,8 +62,8 @@ class ContentViewModelTest{
         assertEquals(dummyMovie.link, contentMovie.link)
 
         //Testing Detail TvShow
-        contentViewModel.setContentDetail(dummyTvShow.id)
-        val contentTvShow = contentViewModel.getContentDetail()
+        detailViewModel.setContentDetail(dummyTvShow.id)
+        val contentTvShow = detailViewModel.getContentDetail()
         Assert.assertNotNull(contentTvShow)
         assertEquals(dummyTvShow.id, contentTvShow.id)
         assertEquals(dummyTvShow.title, contentTvShow.title)
