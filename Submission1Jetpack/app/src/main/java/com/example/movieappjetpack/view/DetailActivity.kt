@@ -94,7 +94,6 @@ class DetailActivity : AppCompatActivity() {
         binding.apply {
             tvTitleDetail.text = content.title
             tvDateRelease.text = StringBuilder("Date Release :").append(" ${content.dateRelease}")
-                //resources.getString(R.string.date_release, content.dateRelease)
             tvRating.text = StringBuilder("Rating :").append(" ${content.vote}")
             tvPopularity.text = StringBuilder("Viewers :").append(" ${content.popularity}")
             tvDescription.text = StringBuilder("Description :").append("\n${content.description}")
